@@ -6,9 +6,9 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--exp', type=str, default='cps')
-parser.add_argument('-sl', '--split_labeled', type=str, default='backup/noisy-1p-4')
-parser.add_argument('-su', '--split_unlabeled', type=str, default='backup/noisy-1p-unlabeled')
-parser.add_argument('-se', '--split_eval', type=str, default='eval-50')
+parser.add_argument('-sl', '--split_labeled', type=str, default='labeled')
+parser.add_argument('-su', '--split_unlabeled', type=str, default='unlabeled')
+parser.add_argument('-se', '--split_eval', type=str, default='eval')
 parser.add_argument('-m', '--mixed_precision', action='store_true', default=True) # <--
 parser.add_argument('-ep', '--max_epoch', type=int, default=200)
 parser.add_argument('--cps_loss', type=str, default='wce')

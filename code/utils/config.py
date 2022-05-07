@@ -1,2 +1,2 @@
-base_dir = '/home/ylindw/datas/knee_data'
+base_dir = './knee_data'
 patch_size = (48, 160, 160)

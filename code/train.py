@@ -6,9 +6,9 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--exp', type=str, default='fully')
-parser.add_argument('-s', '--split', type=str, default='noisy-train')
-parser.add_argument('--split_eval', type=str, default='eval-50')
-parser.add_argument('-m', '--mixed_precision', action='store_true', default=True) # <--
+parser.add_argument('-s', '--split', type=str, default='train')
+parser.add_argument('--split_eval', type=str, default='eval')
+parser.add_argument('-m', '--mixed_precision', action='store_true', default=True)
 parser.add_argument('-ep', '--max_epoch', type=int, default=300)
 parser.add_argument('--batch_size', type=int, default=4)
 parser.add_argument('--num_workers', type=int, default=2)

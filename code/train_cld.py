@@ -6,19 +6,19 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--exp', type=str, default='cld')
-parser.add_argument('-sl', '--split_labeled', type=str, default='backup/noisy-1p-4')
-parser.add_argument('-su', '--split_unlabeled', type=str, default='backup/noisy-1p-unlabeled')
-parser.add_argument('-se', '--split_eval', type=str, default='eval-50')
-parser.add_argument('-m', '--mixed_precision', action='store_true', default=True) # <--
+parser.add_argument('-sl', '--split_labeled', type=str, default='labeled')
+parser.add_argument('-su', '--split_unlabeled', type=str, default='unlabeled')
+parser.add_argument('-se', '--split_eval', type=str, default='eval')
+parser.add_argument('-m', '--mixed_precision', action='store_true', default=True)
 parser.add_argument('-ep', '--max_epoch', type=int, default=300)
-parser.add_argument('--cps_loss', type=str, default='wce') # <--
+parser.add_argument('--cps_loss', type=str, default='wce')
 parser.add_argument('--sup_loss', type=str, default='w_ce+dice')
 parser.add_argument('--batch_size', type=int, default=2)
 parser.add_argument('--num_workers', type=int, default=2)
 parser.add_argument('--base_lr', type=float, default=0.01)
 parser.add_argument('-g', '--gpu', type=str, default='0')
 parser.add_argument('-w', '--cps_w', type=float, default=0.1)
-parser.add_argument('-r', '--cps_rampup', action='store_true', default=True) # <--
+parser.add_argument('-r', '--cps_rampup', action='store_true', default=True)
 parser.add_argument('--crop_z', type=int, default=20)
 parser.add_argument('--confs_iter', type=int, default=2)
 parser.add_argument('-cr', '--consistency_rampup', type=float, default=None)

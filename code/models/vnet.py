@@ -133,7 +133,6 @@ class VNet(nn.Module):
         x4_dw = self.block_four_dw(x4)
 
         x5 = self.block_five(x4_dw)
-        # x5 = F.dropout3d(x5, p=0.5, training=True)
         if self.has_dropout:
             x5 = self.dropout(x5)
 
