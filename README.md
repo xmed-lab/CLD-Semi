@@ -22,7 +22,7 @@ This code has been tested with Python 3.6, PyTorch 1.8, torchvision 0.9.0, and C
 
 ### 2. Data Preparation
 
-The MR imaging scans are available at https://oai.nih.gov/. Run the function `process_npy` in `./code/data/preprocess.py` to convert `.nii.gz` files into `.npy` for faster loading. To generate the labeled/unlabeled splits, run the function `process_split_semi` or use our pre-split files in `./knee_data/*.txt`. After preprocessing, the `./knee_data/` folder should be organized as follows:
+The MR imaging scans are available at https://oai.nih.gov/. Run the function `process_npy` in `./code/data/preprocess.py` to convert `.nii.gz` files into `.npy` for faster loading. To generate the labeled/unlabeled splits, run the function `process_split_semi` or use our pre-split files in `./knee_data/splits/*.txt`. After preprocessing, the `./knee_data/` folder should be organized as follows:
 
 ```shell
 ./knee_data/
