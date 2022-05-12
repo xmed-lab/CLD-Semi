@@ -136,16 +136,10 @@ class VNet(nn.Module):
         if self.has_dropout:
             x5 = self.dropout(x5)
 
-        res = [x1, x2, x3, x4, x5]
-
-        return res
+        return x1, x2, x3, x4, x5
 
     def decoder(self, features):
-        x1 = features[0]
-        x2 = features[1]
-        x3 = features[2]
-        x4 = features[3]
-        x5 = features[4]
+        x1, x2, x3, x4, x5 = features
 
         x5_up = self.block_five_up(x5)
         x5_up = x5_up + x4
@@ -164,24 +158,19 @@ class VNet(nn.Module):
         x9 = self.block_nine(x8_up)
         if self.has_dropout:
             x9 = self.dropout(x9)
+        
         out = self.out_conv(x9)
         return out
 
-    def forward(self, image, turnoff_drop=False, noise_std=-1):
-
-        if noise_std > 0:
-            noise = torch.clip(
-                noise_std * torch.randn(image.shape),
-                -2 * noise_std,
-                 2 * noise_std
-            ).cuda()
-            image = image + noise
-
+    def forward(self, image, turnoff_drop=False):
         if turnoff_drop:
             has_dropout = self.has_dropout
             self.has_dropout = False
+        
         features = self.encoder(image)
         out = self.decoder(features)
+        
         if turnoff_drop:
             self.has_dropout = has_dropout
+        
         return out
