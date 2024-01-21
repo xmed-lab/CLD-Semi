@@ -5,14 +5,13 @@ Yiqun Lin, Huifeng Yao, Zezhong Li, Guoyan Zheng, Xiaomeng Li, "Calibrating Labe
 ### 0. Citation
 
 ```
-@misc{cld2022lin,
-  doi = {10.48550/ARXIV.2205.03644},
-  url = {https://arxiv.org/abs/2205.03644},
-  author = {Lin, Yiqun and Yao, Huifeng and Li, Zezhong and Zheng, Guoyan and Li, Xiaomeng},
-  keywords = {Computer Vision and Pattern Recognition (cs.CV), FOS: Computer and information sciences, FOS: Computer and information sciences},
-  title = {Calibrating Label Distribution for Class-Imbalanced Barely-Supervised Knee Segmentation},
-  publisher = {arXiv},
-  year = {2022}
+@inproceedings{lin2022calibrating,
+  title={Calibrating label distribution for class-imbalanced barely-supervised knee segmentation},
+  author={Lin, Yiqun and Yao, Huifeng and Li, Zezhong and Zheng, Guoyan and Li, Xiaomeng},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={109--118},
+  year={2022},
+  organization={Springer}
 }
 ```
 
